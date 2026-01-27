@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://bo7gritww8nho"]
+
+[ext_resource type="Texture2D" uid="uid://ld4oib6mnfch" path="res://assets/o2_listener.png" id="1_vwokr"]
+[ext_resource type="Script" uid="uid://jcnd3x2dnhnx" path="res://script/falling_key.gd" id="2_4sqxr"]
+
+[node name="FallingKey" type="Sprite2D"]
+texture = ExtResource("1_vwokr")
+script = ExtResource("2_4sqxr")
+
+[node name="Timer" type="Timer" parent="."]

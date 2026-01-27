@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://cm56yqawv13q5"]
+
+[ext_resource type="Script" uid="uid://b8faasjsdcbsx" path="res://script/key_listener.gd" id="1_inpow"]
+[ext_resource type="Texture2D" uid="uid://ld4oib6mnfch" path="res://assets/o2_listener.png" id="1_sopbn"]
+
+[node name="KeyListener" type="Sprite2D"]
+texture = ExtResource("1_sopbn")
+script = ExtResource("1_inpow")
