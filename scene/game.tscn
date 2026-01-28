@@ -110,3 +110,92 @@ texture = ExtResource("4_ym5sv")
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_phase_timer_timeout"]
 [connection signal="timeout" from="StationTimer" to="." method="_on_station_timer_timeout"]
+[gd_scene load_steps=12 format=3 uid="uid://18hda4fmubll"]
+
+[ext_resource type="Script" uid="uid://8v57t7rv711g" path="res://script/game.gd" id="1_5kiuu"]
+[ext_resource type="Texture2D" uid="uid://cidcsurswdf2n" path="res://assets/inhaler tutup 1.png" id="2_xwcet"]
+[ext_resource type="Texture2D" uid="uid://cqfdfihudgvxa" path="res://assets/inhaler tutup 3.png" id="3_p1ry8"]
+[ext_resource type="Texture2D" uid="uid://4mrvid57frgf" path="res://assets/inhaler buka.png" id="4_xlg7c"]
+[ext_resource type="Texture2D" uid="uid://i2dh1enyw3ts" path="res://assets/inhaler gas.png" id="5_xlg7c"]
+[ext_resource type="Texture2D" uid="uid://s4070l604rob" path="res://assets/Untitled design.png" id="6_qpk70"]
+[ext_resource type="Texture2D" uid="uid://bwbaw1v8g1euf" path="res://assets/Untitled design (1).png" id="7_ll5lq"]
+[ext_resource type="Texture2D" uid="uid://2endi6ad2832" path="res://assets/Speaker2.png" id="8_17rxn"]
+[ext_resource type="Texture2D" uid="uid://ccw0skrwfodxs" path="res://assets/speaker s.png" id="9_yq8tf"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qpk70"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_xwcet")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_p1ry8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_xlg7c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_xlg7c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_xlg7c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_p1ry8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_xwcet")
+}],
+"loop": true,
+"name": &"inhaler",
+"speed": 6.0
+}]
+
+[sub_resource type="LabelSettings" id="LabelSettings_qpk70"]
+font_size = 750
+font_color = Color(0.4862745, 0.2, 0.15294118, 1)
+
+[node name="game" type="Node2D"]
+script = ExtResource("1_5kiuu")
+
+[node name="bar_ketahanan" type="ProgressBar" parent="."]
+offset_left = 460.0
+offset_top = 100.0
+offset_right = 1460.0
+offset_bottom = 180.0
+size_flags_horizontal = 0
+show_percentage = false
+
+[node name="inhaler" type="AnimatedSprite2D" parent="."]
+position = Vector2(206, 897)
+scale = Vector2(0.054666672, 0.054952893)
+sprite_frames = SubResource("SpriteFrames_qpk70")
+animation = &"inhaler"
+
+[node name="inhaler_ui" type="TextureProgressBar" parent="inhaler"]
+offset_left = -2000.0
+offset_top = -1987.1797
+offset_right = 1000.0
+offset_bottom = 1012.8203
+scale = Vector2(1.25, 1.25)
+fill_mode = 5
+texture_under = ExtResource("6_qpk70")
+texture_progress = ExtResource("7_ll5lq")
+
+[node name="Label" type="Label" parent="inhaler/inhaler_ui"]
+layout_mode = 0
+offset_left = 2727.273
+offset_top = 36.363632
+offset_right = 3472.7275
+offset_bottom = 1058.3636
+text = "5"
+label_settings = SubResource("LabelSettings_qpk70")
+
+[node name="Speaker2" type="Sprite2D" parent="."]
+position = Vector2(188, 178.00002)
+scale = Vector2(0.088833325, 0.088833325)
+texture = ExtResource("8_17rxn")
+
+[node name="SpeakerS" type="Sprite2D" parent="Speaker2"]
+position = Vector2(140, 49)
+texture = ExtResource("9_yq8tf")
