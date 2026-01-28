@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://dvhfevmgyy7ru"]
+
+[ext_resource type="Texture2D" uid="uid://c6vkd2no00f74" path="res://assets/ref rythm.png" id="2_m01mf"]
+
+[sub_resource type="GDScript" id="GDScript_aw0x3"]
+script/source = "extends Area2D
+
+@export var speed: float = 600.0 # Kecepatan meluncur ke kiri
+
+func _process(delta):
+	# Gerakan horizontal ke kiri (Sumbu X negatif)
+	position.x -= speed * delta
+
+# Signal dari VisibleOnScreenNotifier2D
+func _on_visible_on_screen_notifier_2d_screen_exited():
+	# Jika objek terlewat (Pemain tidak menekan tepat waktu)
+	_trigger_miss()
+	queue_free()
+
+func _trigger_miss():
+	# Kamu bisa memanggil fungsi pengurangan stamina di sini
+	# Contoh: get_tree().current_scene.stamina -= 5
+	print(\"MISS! Nafas terganggu.\")
+"
+
+[node name="Note" type="Area2D"]
+collision_layer = 2
+script = SubResource("GDScript_aw0x3")
+
+[node name="RefRythm" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("2_m01mf")
