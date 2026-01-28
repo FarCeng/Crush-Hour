@@ -1,10 +1,20 @@
 [gd_scene load_steps=3 format=3 uid="uid://bo7gritww8nho"]
 
-[ext_resource type="Texture2D" uid="uid://ld4oib6mnfch" path="res://assets/o2_listener.png" id="1_vwokr"]
 [ext_resource type="Script" uid="uid://jcnd3x2dnhnx" path="res://script/falling_key.gd" id="2_4sqxr"]
 
-[node name="FallingKey" type="Sprite2D"]
-texture = ExtResource("1_vwokr")
+[sub_resource type="CircleShape2D" id="CircleShape2D_4sqxr"]
+radius = 8.0
+
+[node name="FallingKey" type="Area2D"]
 script = ExtResource("2_4sqxr")
 
 [node name="Timer" type="Timer" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_4sqxr")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

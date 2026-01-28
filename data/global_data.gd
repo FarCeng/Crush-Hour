@@ -31,8 +31,8 @@ var is_game_over: bool = false
 # Berapa % stamina berkurang per detik di tiap stasiun
 var drain_rates = {
 	1: 1.0,  # Stasiun 1 ke 2
-	2: 1.5,  # Stasiun 2 ke 3
-	3: 2.0   # Stasiun 3 ke 4 (paling sesak)
+	2: 5.0,  # Stasiun 2 ke 3
+	3: 7.0   # Stasiun 3 ke 4 (paling sesak)
 }
 
 func _ready():

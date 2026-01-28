@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ck0d5cusmwh3r"
-path="res://.godot/imported/o2_btn_pressed.png-57b74bde50c6c53e4480723e61cbb590.ctex"
+uid="uid://devy3rj36g0xo"
+path="res://.godot/imported/Untitled51_20260128115237.png-a8545937a657c08047e7eb252740d305.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/o2_btn_pressed.png"
-dest_files=["res://.godot/imported/o2_btn_pressed.png-57b74bde50c6c53e4480723e61cbb590.ctex"]
+source_file="res://assets/NPC/Stasiun 3-4/Untitled51_20260128115237.png"
+dest_files=["res://.godot/imported/Untitled51_20260128115237.png-a8545937a657c08047e7eb252740d305.ctex"]
 
 [params]
 

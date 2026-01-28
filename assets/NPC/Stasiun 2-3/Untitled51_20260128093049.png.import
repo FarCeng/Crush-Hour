@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://crnh3oyhakubf"
-path="res://.godot/imported/co2_listener.png-13a52e12c11b178392b8e353a9930642.ctex"
+uid="uid://bvv6flxcr07v4"
+path="res://.godot/imported/Untitled51_20260128093049.png-979b7c2e32f957de764931c9f1ddee1c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/co2_listener.png"
-dest_files=["res://.godot/imported/co2_listener.png-13a52e12c11b178392b8e353a9930642.ctex"]
+source_file="res://assets/NPC/Stasiun 2-3/Untitled51_20260128093049.png"
+dest_files=["res://.godot/imported/Untitled51_20260128093049.png-979b7c2e32f957de764931c9f1ddee1c.ctex"]
 
 [params]
 
