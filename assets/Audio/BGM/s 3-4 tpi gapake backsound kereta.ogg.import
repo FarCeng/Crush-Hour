@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dko28awvl1h1i"
+path="res://.godot/imported/s 3-4 tpi gapake backsound kereta.ogg-ce7ef908a9d2a8f5f76d27a1680a270c.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/Audio/BGM/s 3-4 tpi gapake backsound kereta.ogg"
+dest_files=["res://.godot/imported/s 3-4 tpi gapake backsound kereta.ogg-ce7ef908a9d2a8f5f76d27a1680a270c.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

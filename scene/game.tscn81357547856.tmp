@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://dtsla1h4e3077"]
+
+[ext_resource type="Script" uid="uid://dw7d7hs56w88" path="res://scene/player_visual.gd" id="1_dbls1"]
+[ext_resource type="Script" uid="uid://34q0ox6eysai" path="res://scene/breath_controller.gd" id="2_33cqm"]
+
+[node name="Game" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(960, 540)
+
+[node name="PlayerVisual" type="ColorRect" parent="."]
+offset_left = 800.0
+offset_top = 560.0
+offset_right = 1120.0
+offset_bottom = 1083.0
+script = ExtResource("1_dbls1")
+
+[node name="BreathController" type="Node" parent="."]
+script = ExtResource("2_33cqm")
+
+[node name="StabilityBar" type="TextureProgressBar" parent="."]
+offset_left = 64.0
+offset_top = 24.0
+offset_right = 664.0
+offset_bottom = 64.0
+tint_under = Color(0.16862746, 0.16862746, 0.16862746, 1)
+tint_progress = Color(0.29803923, 0.6862745, 0.3137255, 1)
+
+[node name="Crowd" type="Node2D" parent="."]

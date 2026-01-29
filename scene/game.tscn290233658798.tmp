@@ -1,0 +1,125 @@
+[gd_scene load_steps=19 format=3 uid="uid://dtsla1h4e3077"]
+
+[ext_resource type="Script" uid="uid://do1hvciqhqsg4" path="res://script/game.gd" id="1_5kiuu"]
+[ext_resource type="Texture2D" uid="uid://b6qcwe87sl18r" path="res://assets/bg blm jadi.png" id="2_dbls1"]
+[ext_resource type="Texture2D" uid="uid://c6vkd2no00f74" path="res://assets/ref rythm.png" id="2_xlg7c"]
+[ext_resource type="Texture2D" uid="uid://bpge61se2bm55" path="res://assets/bar_under.png" id="3_xwcet"]
+[ext_resource type="Script" uid="uid://nrib1gmwlxjn" path="res://script/camera_2d.gd" id="4_5g16k"]
+[ext_resource type="Texture2D" uid="uid://umswaj71chxg" path="res://assets/bar_progress.png" id="4_p1ry8"]
+[ext_resource type="Texture2D" uid="uid://c2hosfaxtvq1v" path="res://assets/bar_over.png" id="4_xlg7c"]
+[ext_resource type="Texture2D" uid="uid://dio4vyuycbr34" path="res://assets/indicator_line.png" id="4_ym5sv"]
+[ext_resource type="Texture2D" uid="uid://b145yfpti6aqh" path="res://assets/bg.png" id="5_81276"]
+[ext_resource type="Texture2D" uid="uid://biiqvdvajipy7" path="res://assets/o2_btn.png" id="8_sng2h"]
+[ext_resource type="Texture2D" uid="uid://ck0d5cusmwh3r" path="res://assets/o2_btn_pressed.png" id="9_5g16k"]
+[ext_resource type="Texture2D" uid="uid://b4svug5fjixs" path="res://assets/co2_btn.png" id="10_81276"]
+[ext_resource type="Texture2D" uid="uid://jtqgchkjfsog" path="res://assets/co2_btn_pressed.png" id="11_ve786"]
+[ext_resource type="PackedScene" uid="uid://bo7gritww8nho" path="res://scene/falling_key.tscn" id="12_sng2h"]
+[ext_resource type="PackedScene" uid="uid://cm56yqawv13q5" path="res://scene/key_listener.tscn" id="14_ve786"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_dbls1"]
+font_color = Color(1, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_33cqm"]
+font_color = Color(1, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_xwcet"]
+font_color = Color(1, 0, 0, 1)
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_5kiuu")
+
+[node name="PhaseTimer" type="Timer" parent="."]
+
+[node name="SpawnTimer" type="Timer" parent="."]
+
+[node name="StationTimer" type="Timer" parent="."]
+
+[node name="ShakeContainer" type="Node2D" parent="."]
+
+[node name="Camera2D" type="Camera2D" parent="ShakeContainer"]
+position = Vector2(960, 540)
+script = ExtResource("4_5g16k")
+
+[node name="RefRythm" type="Sprite2D" parent="ShakeContainer"]
+visible = false
+position = Vector2(960, 540)
+texture = ExtResource("2_xlg7c")
+
+[node name="BgBlmJadi" type="Sprite2D" parent="ShakeContainer"]
+visible = false
+modulate = Color(1, 1, 1, 0.31764707)
+position = Vector2(960, 540)
+texture = ExtResource("2_dbls1")
+
+[node name="Bg" type="Sprite2D" parent="ShakeContainer"]
+position = Vector2(960, 540)
+texture = ExtResource("5_81276")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="StaminaBar" type="TextureProgressBar" parent="CanvasLayer"]
+offset_left = 660.0
+offset_top = 60.0
+offset_right = 1260.0
+offset_bottom = 108.0
+texture_under = ExtResource("3_xwcet")
+texture_over = ExtResource("4_xlg7c")
+texture_progress = ExtResource("4_p1ry8")
+
+[node name="PhaseLabel" type="Label" parent="CanvasLayer"]
+offset_left = 680.0
+offset_top = 128.0
+offset_right = 808.0
+offset_bottom = 168.0
+label_settings = SubResource("LabelSettings_dbls1")
+
+[node name="StationLabel" type="Label" parent="CanvasLayer"]
+offset_left = 1128.0
+offset_top = 112.0
+offset_right = 1256.0
+offset_bottom = 152.0
+label_settings = SubResource("LabelSettings_33cqm")
+
+[node name="InhalerLabel" type="Label" parent="CanvasLayer"]
+offset_left = 432.0
+offset_top = 72.0
+offset_right = 624.0
+offset_bottom = 112.0
+label_settings = SubResource("LabelSettings_xwcet")
+
+[node name="ItemButton" type="TextureButton" parent="CanvasLayer"]
+offset_left = 102.0
+offset_top = 844.0
+offset_right = 282.0
+offset_bottom = 1024.0
+texture_normal = ExtResource("8_sng2h")
+texture_pressed = ExtResource("9_5g16k")
+
+[node name="IndicatorLine" type="Sprite2D" parent="."]
+position = Vector2(1728.0935, 527.75)
+scale = Vector2(1.0093404, 1.2193232)
+texture = ExtResource("4_ym5sv")
+
+[node name="KeyListener" type="TextureButton" parent="."]
+offset_left = 1638.0
+offset_top = 845.0
+offset_right = 1818.0
+offset_bottom = 1025.0
+texture_normal = ExtResource("10_81276")
+texture_pressed = ExtResource("11_ve786")
+
+[node name="KeyListener2" parent="." instance=ExtResource("14_ve786")]
+position = Vector2(1728, 935)
+
+[node name="FallingKey" parent="." instance=ExtResource("12_sng2h")]
+position = Vector2(1728, 288)
+
+[node name="IndicatorLine2" type="Sprite2D" parent="."]
+position = Vector2(1728.0001, 512)
+scale = Vector2(1, 1.6473906)
+texture = ExtResource("4_ym5sv")
+
+[connection signal="timeout" from="PhaseTimer" to="." method="_on_phase_timer_timeout"]
+[connection signal="timeout" from="SpawnTimer" to="." method="_on_phase_timer_timeout"]
+[connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]
+[connection signal="timeout" from="StationTimer" to="." method="_on_station_timer_timeout"]

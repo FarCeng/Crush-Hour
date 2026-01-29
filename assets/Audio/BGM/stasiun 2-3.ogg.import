@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bjo8icb6f8wvc"
+path="res://.godot/imported/stasiun 2-3.ogg-68bebf440fb5577c2a245ff368b7ff2d.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/Audio/BGM/stasiun 2-3.ogg"
+dest_files=["res://.godot/imported/stasiun 2-3.ogg-68bebf440fb5577c2a245ff368b7ff2d.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
