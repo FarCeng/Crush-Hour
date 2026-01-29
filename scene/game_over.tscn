@@ -1,0 +1,80 @@
+[gd_scene load_steps=11 format=3 uid="uid://cg3gi6e6brq1i"]
+
+[ext_resource type="Texture2D" uid="uid://clgmo2vvbwbtw" path="res://assets/Image/Rectangle 5.png" id="1_0sgxn"]
+[ext_resource type="Texture2D" uid="uid://d2r6q13mvsiar" path="res://assets/Image/Victory.png" id="2_p3ufs"]
+[ext_resource type="Texture2D" uid="uid://dw58qscf0cggr" path="res://assets/Image/Rectangle 6.png" id="3_0wuup"]
+[ext_resource type="Texture2D" uid="uid://cre6mvq110qe1" path="res://assets/Image/Defeat.png" id="4_nhro7"]
+[ext_resource type="Texture2D" uid="uid://cy0mjeo1eyrsy" path="res://assets/Image/Button/Skip.png" id="5_qbgy4"]
+[ext_resource type="Texture2D" uid="uid://67ueo3oah14s" path="res://assets/Image/Button/Skip_Press.png" id="6_jy3q7"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_46orx"]
+texture = ExtResource("1_0sgxn")
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_km567"]
+texture = ExtResource("2_p3ufs")
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oytb5"]
+texture = ExtResource("3_0wuup")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ej4y8"]
+texture = ExtResource("4_nhro7")
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="GameOver" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Victory" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 700.0
+offset_bottom = -260.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_46orx")
+
+[node name="Panel2" type="Panel" parent="Victory"]
+layout_mode = 0
+offset_left = 324.0
+offset_top = -54.0
+offset_right = 953.0
+offset_bottom = 120.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_km567")
+
+[node name="Defeat" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 700.0
+offset_right = 1902.0
+offset_bottom = 820.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_oytb5")
+
+[node name="Panel" type="Panel" parent="Defeat"]
+layout_mode = 0
+offset_left = 324.0
+offset_top = -54.0
+offset_right = 910.0
+offset_bottom = 94.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_ej4y8")
+
+[node name="Skip" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1616.0
+offset_top = 961.0
+offset_right = 1868.0
+offset_bottom = 1037.0
+texture_normal = ExtResource("5_qbgy4")
+texture_pressed = ExtResource("6_jy3q7")
+texture_hover = ExtResource("6_jy3q7")
+stretch_mode = 5

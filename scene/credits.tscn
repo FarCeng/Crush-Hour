@@ -140,60 +140,60 @@ layout_mode = 2
 layout_mode = 2
 theme_override_fonts/font = ExtResource("5_tphso")
 theme_override_font_sizes/font_size = 27
-text = "Daffa Hafrin Avicena Al Azizi"
+text = "054-Daffa Hafrin Avicena Al Azizi"
 
 [node name="Label2" type="Label" parent="Panel/HBoxContainer/VBoxContainer2"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("5_tphso")
 theme_override_font_sizes/font_size = 27
-text = "Evelyn Olivia Manurung"
+text = "065-Evelyn Olivia Manurung"
 
 [node name="Label3" type="Label" parent="Panel/HBoxContainer/VBoxContainer2"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("5_tphso")
 theme_override_font_sizes/font_size = 27
-text = "Fathia Yasmin Syafitri"
+text = "075-Fathia Yasmin Syafitri"
 
 [node name="Label4" type="Label" parent="Panel/HBoxContainer/VBoxContainer2"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("5_tphso")
 theme_override_font_sizes/font_size = 27
-text = "Felicia Barbara Nadine Putri Utami"
+text = "080-Felicia Barbara Nadine Putri Utami"
 
 [node name="Label5" type="Label" parent="Panel/HBoxContainer/VBoxContainer2"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("5_tphso")
 theme_override_font_sizes/font_size = 27
-text = "Miska Haidar Rasyid"
+text = "130-Miska Haidar Rasyid"
 
 [node name="Label6" type="Label" parent="Panel/HBoxContainer/VBoxContainer2"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("5_tphso")
 theme_override_font_sizes/font_size = 27
-text = "Amogha Chaka Pramudita"
+text = "302-Amogha Chaka Pramudita"
 
 [node name="Label7" type="Label" parent="Panel/HBoxContainer/VBoxContainer2"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("5_tphso")
 theme_override_font_sizes/font_size = 27
-text = "Uways Abdul Hamid"
+text = "311-Uways Abdul Hamid"
 
 [node name="Label8" type="Label" parent="Panel/HBoxContainer/VBoxContainer2"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("5_tphso")
 theme_override_font_sizes/font_size = 27
-text = "Naura Rahmani Azizah"
+text = "322-Naura Rahmani Azizah"
 
 [node name="Label9" type="Label" parent="Panel/HBoxContainer/VBoxContainer2"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("5_tphso")
 theme_override_font_sizes/font_size = 27
-text = "Muhammad Faiz Ramadhan"
+text = "326-Muhammad Faiz Ramadhan"
 
 [node name="Label10" type="Label" parent="Panel/HBoxContainer/VBoxContainer2"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("5_tphso")
 theme_override_font_sizes/font_size = 27
-text = "Farrel Aryaputra Andanu"
+text = "328-Farrel Aryaputra Andanu"
 
 [connection signal="pressed" from="Panel/Skip" to="." method="_on_skip_pressed"]

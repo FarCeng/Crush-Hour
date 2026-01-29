@@ -10,11 +10,13 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass
+	pause.visible = false
 
 
 func _on_resume_pressed() -> void:
 	button.play()
+	pause.visible = false
+	get_tree().paused = false
 
 
 func _on_settings_pressed() -> void:
