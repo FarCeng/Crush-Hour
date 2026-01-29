@@ -47,14 +47,14 @@ anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -120.0
+offset_top = -100.0
+offset_bottom = -15.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_fonts/font = ExtResource("3_2cikm")
-theme_override_font_sizes/font_size = 25
-text = "This early morning, at 1 a.m., a man was found dead on a train with a destination to Shipidibaum. 
-He is suspected to die because of suffocation, caused by asthma and low oxygen supply. Pretty sad isn’t it? 
-He died because of you, player. Because of you."
+theme_override_font_sizes/font_size = 27
+text = "This early morning, at 1 a.m., a man was found dead on a train with a destination to Shipidibaum.  He is suspected to die because of suffocation, caused by asthma
+and low oxygen supply. Pretty sad isn’t it? He died because of you,"
 horizontal_alignment = 1
 
 [node name="Timer" type="Timer" parent="Cutscene 1"]
@@ -83,9 +83,7 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_fonts/font = ExtResource("3_2cikm")
 theme_override_font_sizes/font_size = 25
-text = "This early morning, at 1 a.m., a man was found dead on a train with a destination to Shipidibaum. 
-He is suspected to die because of suffocation, caused by asthma and low oxygen supply. Pretty sad isn’t it? 
-He died because of you, player. Because of you."
+text = " He died because of you, player."
 horizontal_alignment = 1
 
 [node name="Timer" type="Timer" parent="Cutscene 2"]
