@@ -1,0 +1,119 @@
+[gd_scene load_steps=12 format=3 uid="uid://b38f824jrq3"]
+
+[ext_resource type="Texture2D" uid="uid://cw32no4iw6r8y" path="res://assets/Image/UI/Rectangle 4.png" id="1_6dn1e"]
+[ext_resource type="Script" uid="uid://25eaesshx6et" path="res://script/scene_kalah.gd" id="1_olddl"]
+[ext_resource type="Texture2D" uid="uid://cy0mjeo1eyrsy" path="res://assets/Image/Button/Skip.png" id="2_cwg8a"]
+[ext_resource type="Texture2D" uid="uid://cauony3ywnln8" path="res://assets/Image/Cutscene/bad end 1.png" id="2_iuea8"]
+[ext_resource type="FontFile" uid="uid://ci0laul4gperq" path="res://assets/Font/IndieFlower-Regular.ttf" id="3_2cikm"]
+[ext_resource type="Texture2D" uid="uid://67ueo3oah14s" path="res://assets/Image/Button/Skip_Press.png" id="3_wk11h"]
+[ext_resource type="Texture2D" uid="uid://ena6qgvv88ri" path="res://assets/Image/Cutscene/bad end 2.png" id="4_d3o0h"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_66lof"]
+texture = ExtResource("2_iuea8")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pdway"]
+texture = ExtResource("4_d3o0h")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_14j5w"]
+texture = ExtResource("1_6dn1e")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_olddl"]
+texture = ExtResource("1_6dn1e")
+
+[node name="Scene_kalah" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_olddl")
+
+[node name="Cutscene 1" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_66lof")
+
+[node name="Label" type="Label" parent="Cutscene 1"]
+z_index = 1
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -120.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("3_2cikm")
+theme_override_font_sizes/font_size = 25
+text = "This early morning, at 1 a.m., a man was found dead on a train with a destination to Shipidibaum. 
+He is suspected to die because of suffocation, caused by asthma and low oxygen supply. Pretty sad isn’t it? 
+He died because of you, player. Because of you."
+horizontal_alignment = 1
+
+[node name="Timer" type="Timer" parent="Cutscene 1"]
+
+[node name="AudioListener2D" type="AudioStreamPlayer2D" parent="Cutscene 1"]
+
+[node name="Cutscene 2" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_pdway")
+
+[node name="Label" type="Label" parent="Cutscene 2"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -75.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("3_2cikm")
+theme_override_font_sizes/font_size = 25
+text = "This early morning, at 1 a.m., a man was found dead on a train with a destination to Shipidibaum. 
+He is suspected to die because of suffocation, caused by asthma and low oxygen supply. Pretty sad isn’t it? 
+He died because of you, player. Because of you."
+horizontal_alignment = 1
+
+[node name="Timer" type="Timer" parent="Cutscene 2"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Cutscene 2"]
+
+[node name="Panel2" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 120.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_14j5w")
+
+[node name="Panel3" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -120.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxTexture_olddl")
+
+[node name="Skip" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1574.0
+offset_top = 24.0
+offset_right = 1826.0
+offset_bottom = 100.0
+texture_normal = ExtResource("2_cwg8a")
+texture_pressed = ExtResource("3_wk11h")
+texture_hover = ExtResource("3_wk11h")
+stretch_mode = 5

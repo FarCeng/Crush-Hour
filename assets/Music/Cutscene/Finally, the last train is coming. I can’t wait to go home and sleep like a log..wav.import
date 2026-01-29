@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://butj8amlvkbne"
+path="res://.godot/imported/Finally, the last train is coming. I can’t wait to go home and sleep like a log..wav-bee74d3b8cb9b4389c9ee5490d58f9f2.sample"
+
+[deps]
+
+source_file="res://assets/Music/Cutscene/Finally, the last train is coming. I can’t wait to go home and sleep like a log..wav"
+dest_files=["res://.godot/imported/Finally, the last train is coming. I can’t wait to go home and sleep like a log..wav-bee74d3b8cb9b4389c9ee5490d58f9f2.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -1,0 +1,233 @@
+[gd_scene load_steps=23 format=3 uid="uid://fcioie8tx1xo"]
+
+[ext_resource type="Script" uid="uid://caefts1pf7xjg" path="res://script/settings.gd" id="1_n3y38"]
+[ext_resource type="Texture2D" uid="uid://d2bclcs8kl2ud" path="res://assets/Image/Settings.png" id="1_qq54q"]
+[ext_resource type="Texture2D" uid="uid://bjy42qv5fmfnv" path="res://assets/Image/Ellipse 2.png" id="2_i0dwx"]
+[ext_resource type="Texture2D" uid="uid://cnaomlqx1cpqj" path="res://assets/Image/UI/Background Music.png" id="2_inykl"]
+[ext_resource type="Texture2D" uid="uid://ci5eameacv1lg" path="res://assets/Image/UI/Icon1.png" id="2_s4wf2"]
+[ext_resource type="Texture2D" uid="uid://cta10c2n4l23v" path="res://assets/Image/UI/Icon.png" id="4_kylth"]
+[ext_resource type="Texture2D" uid="uid://cs8ot521vun0f" path="res://assets/Image/UI/Sound Effects.png" id="6_03ef0"]
+[ext_resource type="Script" uid="uid://cum805da4568n" path="res://script/music.gd" id="6_noo8n"]
+[ext_resource type="Texture2D" uid="uid://ccggl4f4sn8jo" path="res://assets/Image/Button/Confirm..png" id="7_4fxvy"]
+[ext_resource type="Texture2D" uid="uid://r0ddp141atnf" path="res://assets/Image/Button/Confirm._Press.png" id="8_n3y38"]
+[ext_resource type="Script" uid="uid://del4gf14six2g" path="res://script/sfx.gd" id="8_nv6u4"]
+[ext_resource type="AudioStream" uid="uid://dayurc0rtbci" path="res://assets/Music/button.wav" id="10_vg201"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i0dwx"]
+bg_color = Color(0.13333334, 0.21960784, 0.3764706, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4smsi"]
+texture = ExtResource("1_qq54q")
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n3y38"]
+texture = ExtResource("2_inykl")
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_inykl"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_03ef0"]
+texture = ExtResource("2_s4wf2")
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_s4wf2"]
+color = Color(0.13333334, 0.21960784, 0.3764706, 1)
+thickness = 25
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_kylth"]
+color = Color(1, 1, 1, 1)
+thickness = 25
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_inykl"]
+color = Color(1, 1, 1, 1)
+thickness = 25
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4fxvy"]
+texture = ExtResource("4_kylth")
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vg201"]
+texture = ExtResource("6_03ef0")
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="Setting" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 12.0
+offset_top = -8.0
+offset_right = 12.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_n3y38")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 643.5
+offset_top = 176.0
+offset_right = -643.5
+offset_bottom = -340.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_i0dwx")
+
+[node name="Panel2" type="Panel" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -185.5
+offset_top = -198.0
+offset_right = 185.5
+offset_bottom = -106.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_4smsi")
+
+[node name="Panel4" type="Panel" parent="Panel"]
+layout_mode = 0
+offset_left = 54.0
+offset_top = 226.0
+offset_right = 356.0
+offset_bottom = 257.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_n3y38")
+
+[node name="Panel3" type="Panel" parent="Panel"]
+layout_mode = 0
+offset_left = 96.5
+offset_top = 282.0
+offset_right = 504.5
+offset_bottom = 313.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_inykl")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -262.5
+offset_top = -7.0
+offset_right = 262.5
+offset_bottom = 39.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 18
+
+[node name="Logo audio" type="Panel" parent="Panel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.15
+theme_override_styles/panel = SubResource("StyleBoxTexture_03ef0")
+
+[node name="Music" type="HSlider" parent="Panel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+size_flags_stretch_ratio = 14.19
+theme_override_icons/grabber = ExtResource("2_i0dwx")
+theme_override_icons/grabber_highlight = ExtResource("2_i0dwx")
+theme_override_icons/grabber_disabled = ExtResource("2_i0dwx")
+theme_override_styles/slider = SubResource("StyleBoxLine_s4wf2")
+theme_override_styles/grabber_area = SubResource("StyleBoxLine_kylth")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxLine_inykl")
+max_value = 1.0
+step = 0.01
+value = 1.0
+script = ExtResource("6_noo8n")
+audio_bus_name = "Music"
+
+[node name="Logo audio 2" type="Panel" parent="Panel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.25
+theme_override_styles/panel = SubResource("StyleBoxTexture_4fxvy")
+
+[node name="Panel5" type="Panel" parent="Panel"]
+layout_mode = 0
+offset_left = 96.5
+offset_top = 457.0
+offset_right = 504.5
+offset_bottom = 488.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_inykl")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Panel"]
+layout_mode = 0
+offset_left = 54.0
+offset_top = 450.0
+offset_right = 579.0
+offset_bottom = 496.0
+theme_override_constants/separation = 18
+
+[node name="Logo audio" type="Panel" parent="Panel/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.15
+theme_override_styles/panel = SubResource("StyleBoxTexture_03ef0")
+
+[node name="SFX" type="HSlider" parent="Panel/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+size_flags_stretch_ratio = 14.19
+theme_override_icons/grabber = ExtResource("2_i0dwx")
+theme_override_icons/grabber_highlight = ExtResource("2_i0dwx")
+theme_override_icons/grabber_disabled = ExtResource("2_i0dwx")
+theme_override_styles/slider = SubResource("StyleBoxLine_s4wf2")
+theme_override_styles/grabber_area = SubResource("StyleBoxLine_kylth")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxLine_inykl")
+max_value = 1.0
+step = 0.01
+value = 1.0
+script = ExtResource("8_nv6u4")
+audio_bus_name = "SFX"
+
+[node name="Logo audio 2" type="Panel" parent="Panel/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.25
+theme_override_styles/panel = SubResource("StyleBoxTexture_4fxvy")
+
+[node name="Panel6" type="Panel" parent="Panel"]
+layout_mode = 0
+offset_left = 54.0
+offset_top = 406.0
+offset_right = 273.0
+offset_bottom = 433.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_vg201")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 643.5
+offset_top = 825.0
+offset_right = 1272.5
+offset_bottom = 948.0
+texture_normal = ExtResource("7_4fxvy")
+texture_pressed = ExtResource("8_n3y38")
+texture_hover = ExtResource("8_n3y38")
+
+[node name="button" type="AudioStreamPlayer2D" parent="TextureButton"]
+stream = ExtResource("10_vg201")
+bus = &"SFX"
+
+[connection signal="value_changed" from="Panel/HBoxContainer/Music" to="Panel/HBoxContainer/Music" method="_on_value_changed"]
+[connection signal="value_changed" from="Panel/HBoxContainer2/SFX" to="Panel/HBoxContainer2/SFX" method="_on_value_changed"]
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

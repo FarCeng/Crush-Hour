@@ -1,0 +1,122 @@
+[gd_scene load_steps=14 format=3 uid="uid://cmpukmqyyvuq1"]
+
+[ext_resource type="Script" uid="uid://fu1p250fh1iu" path="res://script/scene_menang.gd" id="1_dcvis"]
+[ext_resource type="Texture2D" uid="uid://dlnxe5tj1krs8" path="res://assets/Image/Cutscene/Good end 1.png" id="1_td8my"]
+[ext_resource type="FontFile" uid="uid://ci0laul4gperq" path="res://assets/Font/IndieFlower-Regular.ttf" id="2_dcvis"]
+[ext_resource type="Texture2D" uid="uid://b5rame3dgi74d" path="res://assets/Image/Cutscene/Good end 2.png" id="3_k8lqk"]
+[ext_resource type="AudioStream" uid="uid://s18hrydmfd26" path="res://assets/Music/Cutscene/finally the smell of home.wav" id="4_6c42h"]
+[ext_resource type="Texture2D" uid="uid://cw32no4iw6r8y" path="res://assets/Image/UI/Rectangle 4.png" id="4_sfgdt"]
+[ext_resource type="Texture2D" uid="uid://cy0mjeo1eyrsy" path="res://assets/Image/Button/Skip.png" id="5_6c42h"]
+[ext_resource type="AudioStream" uid="uid://o5m7xyb5rvwe" path="res://assets/Music/Cutscene/thanks-player_-thanks-for-your-help.wav" id="6_hsv4u"]
+[ext_resource type="Texture2D" uid="uid://67ueo3oah14s" path="res://assets/Image/Button/Skip_Press.png" id="6_qc7j0"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hsv4u"]
+texture = ExtResource("1_td8my")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1ccjn"]
+texture = ExtResource("3_k8lqk")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8gp4v"]
+texture = ExtResource("4_sfgdt")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_r67h3"]
+texture = ExtResource("4_sfgdt")
+
+[node name="Scene_Menang" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dcvis")
+
+[node name="Cutscene 1" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_hsv4u")
+
+[node name="Label" type="Label" parent="Cutscene 1"]
+z_index = 1
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -84.0
+offset_bottom = -36.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_dcvis")
+theme_override_font_sizes/font_size = 32
+text = "Finally, the smell of home."
+horizontal_alignment = 1
+
+[node name="Timer" type="Timer" parent="Cutscene 1"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Cutscene 1"]
+stream = ExtResource("4_6c42h")
+
+[node name="Cutscene 2" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_1ccjn")
+
+[node name="Label" type="Label" parent="Cutscene 2"]
+z_index = 1
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -84.0
+offset_bottom = -36.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_dcvis")
+theme_override_font_sizes/font_size = 32
+text = "Thanks, player. Thanks for your help."
+horizontal_alignment = 1
+
+[node name="Timer" type="Timer" parent="Cutscene 2"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Cutscene 2"]
+stream = ExtResource("6_hsv4u")
+
+[node name="Panel2" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 120.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_8gp4v")
+
+[node name="Panel3" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -120.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxTexture_r67h3")
+
+[node name="Skip" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1574.0
+offset_top = 24.0
+offset_right = 1826.0
+offset_bottom = 100.0
+texture_normal = ExtResource("5_6c42h")
+texture_pressed = ExtResource("6_qc7j0")
+texture_hover = ExtResource("6_qc7j0")
+stretch_mode = 5

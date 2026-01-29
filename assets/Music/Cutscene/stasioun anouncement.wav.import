@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cksttgkqkrux4"
+path="res://.godot/imported/stasioun anouncement.wav-cf2dad1a161a7f919f52c9e1dc746bbb.sample"
+
+[deps]
+
+source_file="res://assets/Music/Cutscene/stasioun anouncement.wav"
+dest_files=["res://.godot/imported/stasioun anouncement.wav-cf2dad1a161a7f919f52c9e1dc746bbb.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
