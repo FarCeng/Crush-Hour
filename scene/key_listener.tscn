@@ -58,16 +58,16 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sopbn"]
-size = Vector2(192, 744)
+size = Vector2(192, 680)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_inpow"]
-size = Vector2(192, 336)
+size = Vector2(192, 80)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_awl1b"]
-size = Vector2(192, 112)
+size = Vector2(192, 64)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kuuft"]
-size = Vector2(192, 32)
+size = Vector2(192, 56)
 
 [node name="KeyListener" type="Node2D"]
 
@@ -82,19 +82,23 @@ libraries = {
 [node name="GhostZone" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GhostZone"]
-position = Vector2(0, -564)
+position = Vector2(0, -532)
 shape = SubResource("RectangleShape2D_sopbn")
 
 [node name="BadZone" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BadZone"]
-position = Vector2(0, -24)
+position = Vector2(0, -144)
 shape = SubResource("RectangleShape2D_inpow")
 
 [node name="GoodZone" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GoodZone"]
-position = Vector2(0, -40)
+position = Vector2(0, -64)
+shape = SubResource("RectangleShape2D_awl1b")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="GoodZone"]
+position = Vector2(0, 64)
 shape = SubResource("RectangleShape2D_awl1b")
 
 [node name="PerfectZone" type="Area2D" parent="."]

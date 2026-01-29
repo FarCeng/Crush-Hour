@@ -1,3 +1,113 @@
-[gd_scene format=3 uid="uid://ugfs6mb3eij"]
+[gd_scene load_steps=21 format=3 uid="uid://ugfs6mb3eij"]
+
+[ext_resource type="Texture2D" uid="uid://bxmer14cx1bdo" path="res://assets/NPC/Stasiun 1-2/4.png" id="1_pol60"]
+[ext_resource type="Texture2D" uid="uid://bp425magm55mn" path="res://assets/NPC/Stasiun 1-2/3.png" id="2_b47po"]
+[ext_resource type="Texture2D" uid="uid://bn57lm7iooeqv" path="res://assets/NPC/Stasiun 1-2/2.png" id="3_clll4"]
+[ext_resource type="Texture2D" uid="uid://hungf0fa14v3" path="res://assets/NPC/Stasiun 1-2/1.png" id="4_6s1qm"]
+[ext_resource type="Texture2D" uid="uid://bqm4pyjplati2" path="res://assets/NPC/Stasiun 2-3/Untitled51_20260128093107.png" id="5_d5tfa"]
+[ext_resource type="Texture2D" uid="uid://ccm5pn25ylivx" path="res://assets/NPC/Stasiun 2-3/Untitled51_20260128093102.png" id="6_8bcfb"]
+[ext_resource type="Texture2D" uid="uid://d15ykd5jq4woi" path="res://assets/NPC/Stasiun 2-3/Untitled51_20260128093056.png" id="7_wo3oy"]
+[ext_resource type="Texture2D" uid="uid://bvv6flxcr07v4" path="res://assets/NPC/Stasiun 2-3/Untitled51_20260128093049.png" id="8_xt6m7"]
+[ext_resource type="Texture2D" uid="uid://j66q2602he3" path="res://assets/NPC/Stasiun 2-3/Untitled51_20260128093043.png" id="9_1dw02"]
+[ext_resource type="Texture2D" uid="uid://b7u1l2v8td3cb" path="res://assets/NPC/Stasiun 2-3/Untitled51_20260128093037.png" id="10_fvpr1"]
+[ext_resource type="Texture2D" uid="uid://fnsec8bxa5xm" path="res://assets/NPC/Stasiun 2-3/Untitled51_20260128093031.png" id="11_70gkp"]
+[ext_resource type="Texture2D" uid="uid://dtrf8dejmfv7s" path="res://assets/NPC/Stasiun 3-4/Untitled51_20260128115255.png" id="12_bldkb"]
+[ext_resource type="Texture2D" uid="uid://devy3rj36g0xo" path="res://assets/NPC/Stasiun 3-4/Untitled51_20260128115237.png" id="13_cb77e"]
+[ext_resource type="Texture2D" uid="uid://2kp74mfqjqyk" path="res://assets/NPC/Stasiun 3-4/Untitled51_20260128115226.png" id="14_52wse"]
+[ext_resource type="Texture2D" uid="uid://d2vbbd13c5kco" path="res://assets/NPC/Stasiun 3-4/Untitled51_20260128115213.png" id="15_8c8mf"]
+[ext_resource type="Texture2D" uid="uid://ukj7liit08dk" path="res://assets/NPC/Stasiun 3-4/Untitled51_20260128115209.png" id="16_pvky8"]
+[ext_resource type="Texture2D" uid="uid://ofy8grvu0sh6" path="res://assets/NPC/Stasiun 3-4/Untitled51_20260128093102.png" id="17_jk8h4"]
+[ext_resource type="Texture2D" uid="uid://d0frdhjt62t7q" path="res://assets/NPC/Stasiun 3-4/Untitled51_20260128093056.png" id="18_o42sv"]
+[ext_resource type="Texture2D" uid="uid://bkdvsf7n00sje" path="res://assets/NPC/Stasiun 3-4/Untitled51_20260128093049.png" id="19_ouexm"]
+[ext_resource type="Texture2D" uid="uid://bt7crfgdvfskw" path="res://assets/NPC/Stasiun 3-4/Untitled51_20260128093043.png" id="20_a0lwb"]
 
 [node name="NPC" type="Node2D"]
+
+[node name="Stage1" type="Node2D" parent="."]
+visible = false
+
+[node name="4" type="Sprite2D" parent="Stage1"]
+texture = ExtResource("1_pol60")
+centered = false
+
+[node name="3" type="Sprite2D" parent="Stage1"]
+texture = ExtResource("2_b47po")
+centered = false
+
+[node name="2" type="Sprite2D" parent="Stage1"]
+texture = ExtResource("3_clll4")
+centered = false
+
+[node name="1" type="Sprite2D" parent="Stage1"]
+texture = ExtResource("4_6s1qm")
+centered = false
+
+[node name="Stage2" type="Node2D" parent="."]
+visible = false
+
+[node name="7" type="Sprite2D" parent="Stage2"]
+texture = ExtResource("5_d5tfa")
+centered = false
+
+[node name="6" type="Sprite2D" parent="Stage2"]
+texture = ExtResource("6_8bcfb")
+centered = false
+
+[node name="5" type="Sprite2D" parent="Stage2"]
+texture = ExtResource("7_wo3oy")
+centered = false
+
+[node name="4" type="Sprite2D" parent="Stage2"]
+texture = ExtResource("8_xt6m7")
+centered = false
+
+[node name="3" type="Sprite2D" parent="Stage2"]
+texture = ExtResource("9_1dw02")
+centered = false
+
+[node name="2" type="Sprite2D" parent="Stage2"]
+texture = ExtResource("10_fvpr1")
+centered = false
+
+[node name="1" type="Sprite2D" parent="Stage2"]
+texture = ExtResource("11_70gkp")
+centered = false
+
+[node name="Stage3" type="Node2D" parent="."]
+visible = false
+
+[node name="9" type="Sprite2D" parent="Stage3"]
+texture = ExtResource("12_bldkb")
+centered = false
+
+[node name="8" type="Sprite2D" parent="Stage3"]
+texture = ExtResource("13_cb77e")
+centered = false
+
+[node name="7" type="Sprite2D" parent="Stage3"]
+texture = ExtResource("14_52wse")
+centered = false
+
+[node name="6" type="Sprite2D" parent="Stage3"]
+texture = ExtResource("15_8c8mf")
+centered = false
+
+[node name="5" type="Sprite2D" parent="Stage3"]
+texture = ExtResource("16_pvky8")
+centered = false
+
+[node name="4" type="Sprite2D" parent="Stage3"]
+texture = ExtResource("17_jk8h4")
+centered = false
+
+[node name="3" type="Sprite2D" parent="Stage3"]
+texture = ExtResource("18_o42sv")
+centered = false
+
+[node name="2" type="Sprite2D" parent="Stage3"]
+texture = ExtResource("19_ouexm")
+centered = false
+
+[node name="1" type="Sprite2D" parent="Stage3"]
+texture = ExtResource("20_a0lwb")
+centered = false

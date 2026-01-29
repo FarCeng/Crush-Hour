@@ -1,0 +1,235 @@
+[gd_scene load_steps=27 format=3 uid="uid://dtsla1h4e3077"]
+
+[ext_resource type="Script" uid="uid://8v57t7rv711g" path="res://script/game.gd" id="1_5kiuu"]
+[ext_resource type="Texture2D" uid="uid://1djs223g8054" path="res://assets/parallax.png" id="2_ym5sv"]
+[ext_resource type="Texture2D" uid="uid://bpge61se2bm55" path="res://assets/bar_under.png" id="3_xwcet"]
+[ext_resource type="Script" uid="uid://nrib1gmwlxjn" path="res://script/camera_2d.gd" id="4_5g16k"]
+[ext_resource type="Texture2D" uid="uid://umswaj71chxg" path="res://assets/bar_progress.png" id="4_p1ry8"]
+[ext_resource type="Texture2D" uid="uid://c2hosfaxtvq1v" path="res://assets/bar_over.png" id="4_xlg7c"]
+[ext_resource type="Texture2D" uid="uid://dio4vyuycbr34" path="res://assets/indicator_line.png" id="4_ym5sv"]
+[ext_resource type="Texture2D" uid="uid://nakrjnrn3mnr" path="res://assets/bg_open.png" id="5_0lu6w"]
+[ext_resource type="Texture2D" uid="uid://b145yfpti6aqh" path="res://assets/bg.png" id="5_81276"]
+[ext_resource type="PackedScene" uid="uid://ugfs6mb3eij" path="res://scene/npc.tscn" id="5_ve786"]
+[ext_resource type="Texture2D" uid="uid://vrxxchwko243" path="res://assets/MC/Player.png" id="7_81276"]
+[ext_resource type="Texture2D" uid="uid://c6vkd2no00f74" path="res://assets/ref rythm.png" id="8_ve786"]
+[ext_resource type="Texture2D" uid="uid://ctvjmn04hrhws" path="res://assets/inhaler_bg.png" id="14_i6gbm"]
+[ext_resource type="PackedScene" uid="uid://cm56yqawv13q5" path="res://scene/key_listener.tscn" id="14_ve786"]
+[ext_resource type="Texture2D" uid="uid://cidcsurswdf2n" path="res://assets/inhaler tutup 1.png" id="15_ux4dc"]
+[ext_resource type="Texture2D" uid="uid://cqfdfihudgvxa" path="res://assets/inhaler tutup 3.png" id="16_jrd6n"]
+[ext_resource type="Texture2D" uid="uid://cud4sdhud5u6n" path="res://assets/inhaler_used.png" id="17_jhlss"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i6gbm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_81276")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_0lu6w")
+}],
+"loop": true,
+"name": &"start",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_0lu6w")
+}],
+"loop": true,
+"name": &"transition",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ve786"]
+atlas = ExtResource("7_81276")
+region = Rect2(0, 1080, 1920, 1080)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0lu6w"]
+atlas = ExtResource("7_81276")
+region = Rect2(1920, 1080, 1920, 1080)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i6gbm"]
+atlas = ExtResource("7_81276")
+region = Rect2(0, 0, 1920, 1080)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ux4dc"]
+atlas = ExtResource("7_81276")
+region = Rect2(1920, 0, 1920, 1080)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jrd6n"]
+atlas = ExtResource("7_81276")
+region = Rect2(3840, 0, 1920, 1080)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jhlss"]
+animations = [{
+"frames": [{
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_ve786")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0lu6w")
+}],
+"loop": true,
+"name": &"inhaler",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i6gbm")
+}],
+"loop": true,
+"name": &"stage1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ux4dc")
+}],
+"loop": true,
+"name": &"stage2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jrd6n")
+}],
+"loop": true,
+"name": &"stage3",
+"speed": 5.0
+}]
+
+[sub_resource type="LabelSettings" id="LabelSettings_33cqm"]
+font_size = 45
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ww6yf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_ux4dc")
+}],
+"loop": true,
+"name": &"unused",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_ux4dc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_jrd6n")
+}, {
+"duration": 10.0,
+"texture": ExtResource("17_jhlss")
+}],
+"loop": true,
+"name": &"use_animation",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_jhlss")
+}],
+"loop": true,
+"name": &"used",
+"speed": 3.0
+}]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_5kiuu")
+
+[node name="PhaseTimer" type="Timer" parent="."]
+
+[node name="SpawnTimer" type="Timer" parent="."]
+
+[node name="StationTimer" type="Timer" parent="."]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="BackgroundLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(3840, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/BackgroundLayer"]
+texture = ExtResource("2_ym5sv")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 3840, 1080)
+region_filter_clip_enabled = true
+
+[node name="ShakeContainer" type="Node2D" parent="."]
+
+[node name="Camera2D" type="Camera2D" parent="ShakeContainer"]
+position = Vector2(960, 540)
+script = ExtResource("4_5g16k")
+
+[node name="Bg" type="AnimatedSprite2D" parent="ShakeContainer"]
+position = Vector2(960, 540)
+sprite_frames = SubResource("SpriteFrames_i6gbm")
+animation = &"transition"
+
+[node name="NPC" parent="ShakeContainer" instance=ExtResource("5_ve786")]
+
+[node name="PlayerMC" type="AnimatedSprite2D" parent="ShakeContainer"]
+sprite_frames = SubResource("SpriteFrames_jhlss")
+animation = &"inhaler"
+frame_progress = 0.77002287
+centered = false
+
+[node name="RefRythm" type="Sprite2D" parent="ShakeContainer"]
+visible = false
+texture = ExtResource("8_ve786")
+centered = false
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="StaminaBar" type="TextureProgressBar" parent="CanvasLayer"]
+offset_left = 659.0
+offset_top = 58.0
+offset_right = 1263.0
+offset_bottom = 110.0
+texture_under = ExtResource("3_xwcet")
+texture_over = ExtResource("4_xlg7c")
+texture_progress = ExtResource("4_p1ry8")
+
+[node name="ScorePopUp" type="Label" parent="CanvasLayer"]
+offset_left = 1304.0
+offset_top = 792.0
+offset_right = 1498.0
+offset_bottom = 921.0
+label_settings = SubResource("LabelSettings_33cqm")
+
+[node name="StatusLabel" type="Label" parent="CanvasLayer"]
+offset_left = 696.0
+offset_top = 272.0
+offset_right = 890.0
+offset_bottom = 335.0
+label_settings = SubResource("LabelSettings_33cqm")
+
+[node name="KeyListener" parent="." instance=ExtResource("14_ve786")]
+position = Vector2(1728, 935)
+metadata/_edit_lock_ = true
+
+[node name="IndicatorLine" type="Sprite2D" parent="."]
+position = Vector2(1728, 450.99997)
+texture = ExtResource("4_ym5sv")
+
+[node name="InhalerBg" type="Sprite2D" parent="."]
+position = Vector2(230, 914)
+texture = ExtResource("14_i6gbm")
+
+[node name="Inhaler" type="AnimatedSprite2D" parent="."]
+position = Vector2(285, 857)
+sprite_frames = SubResource("SpriteFrames_ww6yf")
+animation = &"use_animation"
+frame = 2
+frame_progress = 0.4869402
+
+[connection signal="timeout" from="PhaseTimer" to="." method="_on_phase_timer_timeout"]
+[connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]
+[connection signal="timeout" from="StationTimer" to="." method="_on_station_timer_timeout"]

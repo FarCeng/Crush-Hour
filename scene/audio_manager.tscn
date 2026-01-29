@@ -1,0 +1,87 @@
+[gd_scene load_steps=21 format=3 uid="uid://62osyd560dst"]
+
+[ext_resource type="Script" uid="uid://dtd1jytobahdq" path="res://script/audio_manager.gd" id="1_ctfg4"]
+[ext_resource type="AudioStream" uid="uid://g038gqbn8764" path="res://assets/Audio/BGM/bg kereta.ogg" id="1_jmo2v"]
+[ext_resource type="AudioStream" uid="uid://ojv0s5hsihvu" path="res://assets/Audio/BGM/bgm main menu.ogg" id="2_ctfg4"]
+[ext_resource type="AudioStream" uid="uid://cxqjpb6ab2t3b" path="res://assets/Audio/BGM/s1-2 tpi gapake backsound kereta.ogg" id="3_mjxfj"]
+[ext_resource type="AudioStream" uid="uid://bo45ftoa4wbr3" path="res://assets/Audio/BGM/s 2-3 tpi ga pake backsound kereta.ogg" id="4_dt3qd"]
+[ext_resource type="AudioStream" uid="uid://dko28awvl1h1i" path="res://assets/Audio/BGM/s 3-4 tpi gapake backsound kereta.ogg" id="5_p3a13"]
+[ext_resource type="AudioStream" uid="uid://bs43w5pak6gcs" path="res://assets/Audio/BGM/stasiun 1-2.ogg" id="6_jjtks"]
+[ext_resource type="AudioStream" uid="uid://bjo8icb6f8wvc" path="res://assets/Audio/BGM/stasiun 2-3.ogg" id="7_rrhhm"]
+[ext_resource type="AudioStream" uid="uid://c1gyuosg4f1jv" path="res://assets/Audio/BGM/stasiun 3-4.ogg" id="8_pe84c"]
+[ext_resource type="AudioStream" uid="uid://7lxd17f4t3a4" path="res://assets/Audio/SFX/button.ogg" id="9_hbotp"]
+[ext_resource type="AudioStream" uid="uid://dflnd4t8jdaek" path="res://assets/Audio/SFX/c02.ogg" id="10_utgtw"]
+[ext_resource type="AudioStream" uid="uid://crvd7ferxmib5" path="res://assets/Audio/SFX/o2.ogg" id="11_dpj13"]
+[ext_resource type="AudioStream" uid="uid://ispx75tfk8g3" path="res://assets/Audio/SFX/win.ogg" id="12_kdpne"]
+[ext_resource type="AudioStream" uid="uid://j2srfn7u137q" path="res://assets/Audio/SFX/miss.ogg" id="13_jjtks"]
+[ext_resource type="AudioStream" uid="uid://cgkhfbp1xcyfi" path="res://assets/Audio/SFX/lose.ogg" id="13_ttbfq"]
+[ext_resource type="AudioStream" uid="uid://b247cfgooowjm" path="res://assets/Audio/SFX/inhaler-rev-1.ogg" id="14_dq2uh"]
+[ext_resource type="AudioStream" uid="uid://b0vfttg4cj3el" path="res://assets/Audio/SFX/stop 2.ogg" id="16_p3a13"]
+[ext_resource type="AudioStream" uid="uid://bshubv6pfwgmx" path="res://assets/Audio/SFX/stop 3.ogg" id="17_jjtks"]
+[ext_resource type="AudioStream" uid="uid://2lkjs8cihfvj" path="res://assets/Audio/SFX/stop 4.ogg" id="18_rrhhm"]
+[ext_resource type="AudioStream" uid="uid://vlt4p8hmsvua" path="res://assets/Audio/SFX/door.ogg" id="20_rrhhm"]
+
+[node name="AudioManager" type="Node"]
+script = ExtResource("1_ctfg4")
+
+[node name="BGM" type="Node" parent="."]
+
+[node name="bg kereta" type="AudioStreamPlayer2D" parent="BGM"]
+stream = ExtResource("1_jmo2v")
+
+[node name="bgm main menu" type="AudioStreamPlayer2D" parent="BGM"]
+stream = ExtResource("2_ctfg4")
+
+[node name="nobg-s1" type="AudioStreamPlayer2D" parent="BGM"]
+stream = ExtResource("3_mjxfj")
+
+[node name="nobg-s2" type="AudioStreamPlayer2D" parent="BGM"]
+stream = ExtResource("4_dt3qd")
+
+[node name="nobg-s3" type="AudioStreamPlayer2D" parent="BGM"]
+stream = ExtResource("5_p3a13")
+
+[node name="s1" type="AudioStreamPlayer2D" parent="BGM"]
+stream = ExtResource("6_jjtks")
+
+[node name="s2" type="AudioStreamPlayer2D" parent="BGM"]
+stream = ExtResource("7_rrhhm")
+
+[node name="s3" type="AudioStreamPlayer2D" parent="BGM"]
+stream = ExtResource("8_pe84c")
+
+[node name="SFX" type="Node" parent="."]
+
+[node name="button" type="AudioStreamPlayer2D" parent="SFX"]
+stream = ExtResource("9_hbotp")
+
+[node name="co2" type="AudioStreamPlayer2D" parent="SFX"]
+stream = ExtResource("10_utgtw")
+
+[node name="o2" type="AudioStreamPlayer2D" parent="SFX"]
+stream = ExtResource("11_dpj13")
+
+[node name="miss" type="AudioStreamPlayer2D" parent="SFX"]
+stream = ExtResource("13_jjtks")
+volume_db = 5.0
+
+[node name="win" type="AudioStreamPlayer2D" parent="SFX"]
+stream = ExtResource("12_kdpne")
+
+[node name="lose" type="AudioStreamPlayer2D" parent="SFX"]
+stream = ExtResource("13_ttbfq")
+
+[node name="inhaler" type="AudioStreamPlayer2D" parent="SFX"]
+stream = ExtResource("14_dq2uh")
+
+[node name="stop2" type="AudioStreamPlayer2D" parent="SFX"]
+stream = ExtResource("16_p3a13")
+
+[node name="stop3" type="AudioStreamPlayer2D" parent="SFX"]
+stream = ExtResource("17_jjtks")
+
+[node name="stop4" type="AudioStreamPlayer2D" parent="SFX"]
+stream = ExtResource("18_rrhhm")
+
+[node name="door" type="AudioStreamPlayer2D" parent="SFX"]
+stream = ExtResource("20_rrhhm")
