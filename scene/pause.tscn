@@ -90,6 +90,7 @@ texture_hover = ExtResource("3_8eaik")
 
 [node name="button" type="AudioStreamPlayer2D" parent="Panel/VBoxContainer/Resume"]
 stream = ExtResource("5_8eaik")
+bus = &"SFX"
 
 [node name="Settings" type="TextureButton" parent="Panel/VBoxContainer"]
 layout_mode = 2
@@ -99,6 +100,7 @@ texture_hover = ExtResource("5_jx8xp")
 
 [node name="button" type="AudioStreamPlayer2D" parent="Panel/VBoxContainer/Settings"]
 stream = ExtResource("5_8eaik")
+bus = &"SFX"
 
 [node name="Panel" type="Panel" parent="Panel/VBoxContainer"]
 layout_mode = 2
@@ -113,6 +115,7 @@ texture_hover = ExtResource("7_jsluc")
 
 [node name="button" type="AudioStreamPlayer2D" parent="Panel/VBoxContainer/ExitM"]
 stream = ExtResource("5_8eaik")
+bus = &"SFX"
 
 [node name="ExitG" type="TextureButton" parent="Panel/VBoxContainer"]
 layout_mode = 2
@@ -122,6 +125,7 @@ texture_hover = ExtResource("9_dn8v1")
 
 [node name="button" type="AudioStreamPlayer2D" parent="Panel/VBoxContainer/ExitG"]
 stream = ExtResource("5_8eaik")
+bus = &"SFX"
 
 [node name="Setting" parent="." instance=ExtResource("8_4b3ba")]
 visible = false

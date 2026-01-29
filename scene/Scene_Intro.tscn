@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://daujlufee5b7x"]
+[gd_scene load_steps=23 format=3 uid="uid://daujlufee5b7x"]
 
 [ext_resource type="Texture2D" uid="uid://c2w8aq7a5dimn" path="res://assets/Image/Cutscene/Speaker.png" id="1_1nto0"]
 [ext_resource type="Script" uid="uid://c8c6pc07v5xi2" path="res://script/scene_intro.gd" id="1_2a6u4"]
@@ -14,6 +14,7 @@
 [ext_resource type="AudioStream" uid="uid://comi7brkicu3v" path="res://assets/Music/Cutscene/Huh, what_.wav" id="8_5glbm"]
 [ext_resource type="AudioStream" uid="uid://bcq2rhtb5k1px" path="res://assets/Music/Cutscene/Really_-Why-did-this-station-bcome-crowded.wav" id="10_3t3ds"]
 [ext_resource type="AudioStream" uid="uid://dlqu60vemwca4" path="res://assets/Music/Cutscene/Hmm. with this situation on hand, im starting to think.wav" id="11_rmp53"]
+[ext_resource type="AudioStream" uid="uid://bbsd46xdqigpf" path="res://assets/Music/stasiun bg sounf.wav" id="15_oq4u5"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8n0tg"]
 bg_color = Color(0.07450981, 0.2, 0.42352942, 1)
@@ -244,3 +245,7 @@ texture_normal = ExtResource("2_tfvec")
 texture_pressed = ExtResource("3_65kt3")
 texture_hover = ExtResource("3_65kt3")
 stretch_mode = 5
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("15_oq4u5")
+autoplay = true
