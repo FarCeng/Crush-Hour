@@ -1,0 +1,101 @@
+[gd_scene load_steps=14 format=3 uid="uid://1k83xhcw773n"]
+
+[ext_resource type="Texture2D" uid="uid://c2a8knu1m2yua" path="res://assets/Image/What will you choose.._.png" id="1_dmw3d"]
+[ext_resource type="Script" uid="uid://dxsc5f4a4mqn3" path="res://script/selection.gd" id="1_tfk4v"]
+[ext_resource type="Texture2D" uid="uid://byxgr25ut784w" path="res://assets/Image/Button/Pause Button.png" id="2_tfk4v"]
+[ext_resource type="Texture2D" uid="uid://bri6t51ldeb12" path="res://assets/Image/Button/Pause Button_Press.png" id="3_ypmpp"]
+[ext_resource type="Texture2D" uid="uid://cfdb5cxlx17wv" path="res://assets/Image/Button/Stay.png" id="4_fqjyq"]
+[ext_resource type="Texture2D" uid="uid://c812pwprnduv8" path="res://assets/Image/Button/Stay_Press.png" id="5_tt41y"]
+[ext_resource type="AudioStream" uid="uid://dayurc0rtbci" path="res://assets/Music/button.wav" id="5_ypmpp"]
+[ext_resource type="Texture2D" uid="uid://bo1jr5tk4nwpt" path="res://assets/Image/Button/Ride.png" id="6_o6kk6"]
+[ext_resource type="Texture2D" uid="uid://ksoamii34sf8" path="res://assets/Image/Button/Ride_Press.png" id="7_vcjss"]
+[ext_resource type="PackedScene" uid="uid://i5airf04p1ds" path="res://scene/pause.tscn" id="9_tfk4v"]
+[ext_resource type="PackedScene" uid="uid://fcioie8tx1xo" path="res://scene/Settings.tscn" id="10_ypmpp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x4emx"]
+bg_color = Color(0.07450981, 0.2, 0.42352942, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v7xt4"]
+texture = ExtResource("1_dmw3d")
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="Selection" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tfk4v")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_x4emx")
+
+[node name="Panel2" type="Panel" parent="Panel"]
+layout_mode = 0
+offset_left = 418.0
+offset_top = 70.0
+offset_right = 1542.0
+offset_bottom = 163.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_v7xt4")
+
+[node name="Pause" type="TextureButton" parent="Panel"]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 48.0
+offset_right = 120.0
+offset_bottom = 120.0
+texture_normal = ExtResource("2_tfk4v")
+texture_pressed = ExtResource("3_ypmpp")
+texture_hover = ExtResource("3_ypmpp")
+
+[node name="button" type="AudioStreamPlayer2D" parent="Panel/Pause"]
+stream = ExtResource("5_ypmpp")
+bus = &"SFX"
+
+[node name="Stay" type="TextureButton" parent="Panel"]
+layout_mode = 0
+offset_left = 1240.0
+offset_top = 504.0
+offset_right = 1646.0
+offset_bottom = 583.0
+texture_normal = ExtResource("4_fqjyq")
+texture_pressed = ExtResource("5_tt41y")
+texture_hover = ExtResource("5_tt41y")
+
+[node name="button" type="AudioStreamPlayer2D" parent="Panel/Stay"]
+stream = ExtResource("5_ypmpp")
+bus = &"SFX"
+
+[node name="Ride" type="TextureButton" parent="Panel"]
+layout_mode = 0
+offset_left = 280.0
+offset_top = 504.0
+offset_right = 686.0
+offset_bottom = 583.0
+texture_normal = ExtResource("6_o6kk6")
+texture_pressed = ExtResource("7_vcjss")
+texture_hover = ExtResource("7_vcjss")
+
+[node name="button" type="AudioStreamPlayer2D" parent="Panel/Ride"]
+stream = ExtResource("5_ypmpp")
+bus = &"SFX"
+
+[node name="Pause2" parent="." instance=ExtResource("9_tfk4v")]
+visible = false
+layout_mode = 1
+
+[node name="Setting2" parent="Pause2" instance=ExtResource("10_ypmpp")]
+visible = false
+layout_mode = 1
+
+[connection signal="pressed" from="Panel/Pause" to="." method="_on_pause_pressed"]
+[connection signal="pressed" from="Panel/Stay" to="." method="_on_stay_pressed"]
+[connection signal="pressed" from="Panel/Ride" to="." method="_on_ride_pressed"]

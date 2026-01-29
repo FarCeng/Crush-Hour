@@ -1,0 +1,251 @@
+[gd_scene load_steps=23 format=3 uid="uid://daujlufee5b7x"]
+
+[ext_resource type="Texture2D" uid="uid://c2w8aq7a5dimn" path="res://assets/Image/Cutscene/Speaker.png" id="1_1nto0"]
+[ext_resource type="Script" uid="uid://c8c6pc07v5xi2" path="res://script/scene_intro.gd" id="1_2a6u4"]
+[ext_resource type="Texture2D" uid="uid://cw32no4iw6r8y" path="res://assets/Image/UI/Rectangle 4.png" id="1_mn0df"]
+[ext_resource type="FontFile" uid="uid://ci0laul4gperq" path="res://assets/Font/IndieFlower-Regular.ttf" id="2_2a6u4"]
+[ext_resource type="Texture2D" uid="uid://cy0mjeo1eyrsy" path="res://assets/Image/Button/Skip.png" id="2_tfvec"]
+[ext_resource type="Texture2D" uid="uid://67ueo3oah14s" path="res://assets/Image/Button/Skip_Press.png" id="3_65kt3"]
+[ext_resource type="Texture2D" uid="uid://pbq0rwxopjkw" path="res://assets/Image/Cutscene/1 revisi.png" id="3_yvips"]
+[ext_resource type="Texture2D" uid="uid://qnovk2yaphqq" path="res://assets/Image/Cutscene/2 revisi.png" id="4_5km8b"]
+[ext_resource type="AudioStream" uid="uid://cksttgkqkrux4" path="res://assets/Music/Cutscene/stasioun anouncement.wav" id="4_dsvwn"]
+[ext_resource type="Texture2D" uid="uid://donjlrwbwslg0" path="res://assets/Image/Cutscene/3 revisi.png" id="5_oj7hw"]
+[ext_resource type="AudioStream" uid="uid://butj8amlvkbne" path="res://assets/Music/Cutscene/Finally, the last train is coming. I can’t wait to go home and sleep like a log..wav" id="6_oq4u5"]
+[ext_resource type="AudioStream" uid="uid://comi7brkicu3v" path="res://assets/Music/Cutscene/Huh, what_.wav" id="8_5glbm"]
+[ext_resource type="AudioStream" uid="uid://bcq2rhtb5k1px" path="res://assets/Music/Cutscene/Really_-Why-did-this-station-bcome-crowded.wav" id="10_3t3ds"]
+[ext_resource type="AudioStream" uid="uid://dlqu60vemwca4" path="res://assets/Music/Cutscene/Hmm. with this situation on hand, im starting to think.wav" id="11_rmp53"]
+[ext_resource type="AudioStream" uid="uid://bbsd46xdqigpf" path="res://assets/Music/stasiun bg sounf.wav" id="15_oq4u5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8n0tg"]
+bg_color = Color(0.07450981, 0.2, 0.42352942, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dsvwn"]
+texture = ExtResource("1_1nto0")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oq4u5"]
+texture = ExtResource("3_yvips")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5glbm"]
+texture = ExtResource("4_5km8b")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3t3ds"]
+texture = ExtResource("5_oj7hw")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rmp53"]
+texture = ExtResource("5_oj7hw")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0gvho"]
+texture = ExtResource("1_mn0df")
+
+[node name="Intro" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2a6u4")
+
+[node name="Cutscene 1" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8n0tg")
+
+[node name="Panel" type="Panel" parent="Cutscene 1"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -960.0
+offset_top = -418.0
+offset_right = -663.0
+offset_bottom = -80.23529
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_dsvwn")
+
+[node name="Label" type="Label" parent="Cutscene 1"]
+z_index = 1
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -84.0
+offset_bottom = -36.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_2a6u4")
+theme_override_font_sizes/font_size = 32
+text = "Attention please. The next train arriving at Platform 2 is the 0.20 service to Shipidibaum. Please mind the gap and stand behind the yellow line."
+horizontal_alignment = 1
+
+[node name="Timer" type="Timer" parent="Cutscene 1"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Cutscene 1"]
+stream = ExtResource("4_dsvwn")
+bus = &"SFX"
+
+[node name="Cutscene 2" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_oq4u5")
+
+[node name="Label" type="Label" parent="Cutscene 2"]
+z_index = 1
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -84.0
+offset_bottom = -36.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_2a6u4")
+theme_override_font_sizes/font_size = 32
+text = "Finally, the last train is coming. I can’t wait to go home and sleep like a log."
+horizontal_alignment = 1
+
+[node name="Timer" type="Timer" parent="Cutscene 2"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Cutscene 2"]
+stream = ExtResource("6_oq4u5")
+bus = &"SFX"
+
+[node name="Cutscene 3" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_5glbm")
+
+[node name="Label" type="Label" parent="Cutscene 3"]
+z_index = 1
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -84.0
+offset_bottom = -36.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_2a6u4")
+theme_override_font_sizes/font_size = 32
+text = "Huh, what?"
+horizontal_alignment = 1
+
+[node name="Timer" type="Timer" parent="Cutscene 3"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Cutscene 3"]
+stream = ExtResource("8_5glbm")
+bus = &"SFX"
+
+[node name="Cutscene 4" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_3t3ds")
+
+[node name="Label" type="Label" parent="Cutscene 4"]
+z_index = 1
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -84.0
+offset_bottom = -36.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_2a6u4")
+theme_override_font_sizes/font_size = 32
+text = " Really? Why did the station become crowded at this hour? Does everyone have overtime too?"
+horizontal_alignment = 1
+
+[node name="Timer" type="Timer" parent="Cutscene 4"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Cutscene 4"]
+stream = ExtResource("10_3t3ds")
+bus = &"SFX"
+
+[node name="Cutscene 5" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_rmp53")
+
+[node name="Label" type="Label" parent="Cutscene 5"]
+z_index = 1
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -84.0
+offset_bottom = -36.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_2a6u4")
+theme_override_font_sizes/font_size = 32
+text = "Hmm… With this situation on hand, I’m starting to think about sleeping on this station."
+horizontal_alignment = 1
+
+[node name="Timer" type="Timer" parent="Cutscene 5"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Cutscene 5"]
+stream = ExtResource("11_rmp53")
+bus = &"SFX"
+
+[node name="Panel2" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 120.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_0gvho")
+
+[node name="Panel3" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -120.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxTexture_0gvho")
+
+[node name="Skip" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1574.0
+offset_top = 24.0
+offset_right = 1826.0
+offset_bottom = 100.0
+texture_normal = ExtResource("2_tfvec")
+texture_pressed = ExtResource("3_65kt3")
+texture_hover = ExtResource("3_65kt3")
+stretch_mode = 5
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("15_oq4u5")
+autoplay = true

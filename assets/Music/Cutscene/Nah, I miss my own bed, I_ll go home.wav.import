@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dh6touxt73l7a"
+path="res://.godot/imported/Nah, I miss my own bed, I_ll go home.wav-60adc57069d729deaba7d15975a65ec4.sample"
+
+[deps]
+
+source_file="res://assets/Music/Cutscene/Nah, I miss my own bed, I_ll go home.wav"
+dest_files=["res://.godot/imported/Nah, I miss my own bed, I_ll go home.wav-60adc57069d729deaba7d15975a65ec4.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

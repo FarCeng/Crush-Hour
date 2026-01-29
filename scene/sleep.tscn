@@ -1,0 +1,93 @@
+[gd_scene load_steps=12 format=3 uid="uid://dsa7ww8ns5e28"]
+
+[ext_resource type="Script" uid="uid://b583wo482rmmu" path="res://script/sleep.gd" id="1_4wpby"]
+[ext_resource type="Texture2D" uid="uid://b87t48luu8qc1" path="res://assets/Image/Cutscene/sleep here.png" id="1_htgne"]
+[ext_resource type="FontFile" uid="uid://ci0laul4gperq" path="res://assets/Font/IndieFlower-Regular.ttf" id="2_4wpby"]
+[ext_resource type="Texture2D" uid="uid://cw32no4iw6r8y" path="res://assets/Image/UI/Rectangle 4.png" id="3_l6bj5"]
+[ext_resource type="Texture2D" uid="uid://cy0mjeo1eyrsy" path="res://assets/Image/Button/Skip.png" id="4_br3o1"]
+[ext_resource type="AudioStream" uid="uid://dnuo4fsrvsskj" path="res://assets/Music/Cutscene/Well_-i-think-sleeping-here-is-not-bad-enough_-gn-player.wav" id="4_l6bj5"]
+[ext_resource type="Texture2D" uid="uid://67ueo3oah14s" path="res://assets/Image/Button/Skip_Press.png" id="5_r78ti"]
+[ext_resource type="AudioStream" uid="uid://bbsd46xdqigpf" path="res://assets/Music/stasiun bg sounf.wav" id="8_br3o1"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pl2pj"]
+texture = ExtResource("1_htgne")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v5aer"]
+texture = ExtResource("3_l6bj5")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8svoj"]
+texture = ExtResource("3_l6bj5")
+
+[node name="Sleep" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4wpby")
+
+[node name="Cutscene 1" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_pl2pj")
+
+[node name="Label" type="Label" parent="Cutscene 1"]
+z_index = 1
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -84.0
+offset_bottom = -36.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_4wpby")
+theme_override_font_sizes/font_size = 32
+text = "Well, I think sleeping here is not bad enough. Good night, player. Sleep well."
+horizontal_alignment = 1
+
+[node name="Timer" type="Timer" parent="Cutscene 1"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Cutscene 1"]
+stream = ExtResource("4_l6bj5")
+bus = &"SFX"
+
+[node name="Panel2" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 120.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_v5aer")
+
+[node name="Panel3" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -120.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxTexture_8svoj")
+
+[node name="Skip" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1574.0
+offset_top = 24.0
+offset_right = 1826.0
+offset_bottom = 100.0
+texture_normal = ExtResource("4_br3o1")
+texture_pressed = ExtResource("5_r78ti")
+texture_hover = ExtResource("5_r78ti")
+stretch_mode = 5
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_br3o1")
+autoplay = true

@@ -1,0 +1,88 @@
+[gd_scene load_steps=11 format=3 uid="uid://bclpje001msnn"]
+
+[ext_resource type="Texture2D" uid="uid://foxjavvf2s4i" path="res://assets/Image/Cutscene/go home revisi.png" id="1_c6rhi"]
+[ext_resource type="Script" uid="uid://clf5qif1hkhxx" path="res://script/home.gd" id="1_n20s8"]
+[ext_resource type="FontFile" uid="uid://ci0laul4gperq" path="res://assets/Font/IndieFlower-Regular.ttf" id="2_n20s8"]
+[ext_resource type="Texture2D" uid="uid://cw32no4iw6r8y" path="res://assets/Image/UI/Rectangle 4.png" id="3_eeeoo"]
+[ext_resource type="AudioStream" uid="uid://dh6touxt73l7a" path="res://assets/Music/Cutscene/Nah, I miss my own bed, I_ll go home.wav" id="4_eeeoo"]
+[ext_resource type="Texture2D" uid="uid://cy0mjeo1eyrsy" path="res://assets/Image/Button/Skip.png" id="4_v3yxl"]
+[ext_resource type="Texture2D" uid="uid://67ueo3oah14s" path="res://assets/Image/Button/Skip_Press.png" id="5_o2m4f"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vs2f5"]
+texture = ExtResource("1_c6rhi")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_34jhd"]
+texture = ExtResource("3_eeeoo")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sufg3"]
+texture = ExtResource("3_eeeoo")
+
+[node name="Home" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_n20s8")
+
+[node name="Cutscene 1" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_vs2f5")
+
+[node name="Label" type="Label" parent="Cutscene 1"]
+z_index = 1
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -84.0
+offset_bottom = -36.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_n20s8")
+theme_override_font_sizes/font_size = 32
+text = "Nah, I miss my own bed. I’ll go home no matter what."
+horizontal_alignment = 1
+
+[node name="Timer" type="Timer" parent="Cutscene 1"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Cutscene 1"]
+stream = ExtResource("4_eeeoo")
+bus = &"SFX"
+
+[node name="Panel2" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 120.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_34jhd")
+
+[node name="Panel3" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -120.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxTexture_sufg3")
+
+[node name="Skip" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1574.0
+offset_top = 24.0
+offset_right = 1826.0
+offset_bottom = 100.0
+texture_normal = ExtResource("4_v3yxl")
+texture_pressed = ExtResource("5_o2m4f")
+texture_hover = ExtResource("5_o2m4f")
+stretch_mode = 5
