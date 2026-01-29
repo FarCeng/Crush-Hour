@@ -20,7 +20,7 @@ func _on_stay_pressed() -> void:
 
 func _on_ride_pressed() -> void:
 	button.play()
-	get_tree().change_scene_to_file("res://scene/home.tscn")
+	get_tree().change_scene_to_file("res://scene/game.tscn")
 
 
 func _on_confirm_pressed() -> void:

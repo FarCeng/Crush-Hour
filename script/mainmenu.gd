@@ -12,15 +12,19 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	GlobalData.reset_game()
 	pass
 
 
-func _on_start_pressed() -> void:
-	button.play()
+func _on_start_pressed():
+	print("btntn")
+	GlobalData.reset_game()
 	get_tree().change_scene_to_file("res://scene/Scene_Intro.tscn")
 
 
+
 func _on_settings_pressed() -> void:
+	
 	button.play()
 	setting.visible = true
 	h_box_container.visible = false
@@ -28,7 +32,7 @@ func _on_settings_pressed() -> void:
 
 func _on_extras_pressed() -> void:
 	button.play()
-
+	get_tree().change_scene_to_file("res://scene/credits.tscn")
 
 func _on_exit_pressed() -> void:
 	button.play()

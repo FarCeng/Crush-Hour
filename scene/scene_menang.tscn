@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://fu1p250fh1iu" path="res://script/scene_menang.gd" id="1_dcvis"]
 [ext_resource type="Texture2D" uid="uid://dlnxe5tj1krs8" path="res://assets/Image/Cutscene/Good end 1.png" id="1_td8my"]
-[ext_resource type="FontFile" uid="uid://ci0laul4gperq" path="res://assets/Font/IndieFlower-Regular.ttf" id="2_dcvis"]
+[ext_resource type="FontFile" uid="uid://ci0laul4gperq" path="res://assets/font/IndieFlower-Regular.ttf" id="2_dcvis"]
 [ext_resource type="Texture2D" uid="uid://b5rame3dgi74d" path="res://assets/Image/Cutscene/Good end 2.png" id="3_k8lqk"]
 [ext_resource type="AudioStream" uid="uid://s18hrydmfd26" path="res://assets/Music/Cutscene/finally the smell of home.wav" id="4_6c42h"]
 [ext_resource type="Texture2D" uid="uid://cw32no4iw6r8y" path="res://assets/Image/UI/Rectangle 4.png" id="4_sfgdt"]

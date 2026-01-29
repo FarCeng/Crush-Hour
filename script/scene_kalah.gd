@@ -11,6 +11,8 @@ var is_transitioning := false
 # Dipanggil saat scene dimulai.
 # Mengisi array 'cutscenes', menghubungkan tombol Skip, dan memulai cutscene pertama.
 func _ready():
+	AudioManager.stop_all_bgm()
+	AudioManager.stop_all_sfx()
 	cutscenes = [
 		$"Cutscene 1",
 		$"Cutscene 2",

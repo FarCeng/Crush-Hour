@@ -1,9 +1,9 @@
-[gd_scene load_steps=32 format=3 uid="uid://dtsla1h4e3077"]
+[gd_scene load_steps=36 format=3 uid="uid://18hda4fmubll"]
 
 [ext_resource type="Script" uid="uid://8v57t7rv711g" path="res://script/game.gd" id="1_5kiuu"]
 [ext_resource type="Texture2D" uid="uid://1djs223g8054" path="res://assets/parallax.png" id="2_ym5sv"]
 [ext_resource type="Texture2D" uid="uid://bpge61se2bm55" path="res://assets/bar_under.png" id="3_xwcet"]
-[ext_resource type="Script" uid="uid://nrib1gmwlxjn" path="res://script/camera_2d.gd" id="4_5g16k"]
+[ext_resource type="Script" path="res://script/camera_2d.gd" id="4_5g16k"]
 [ext_resource type="Texture2D" uid="uid://umswaj71chxg" path="res://assets/bar_progress.png" id="4_p1ry8"]
 [ext_resource type="Texture2D" uid="uid://c2hosfaxtvq1v" path="res://assets/bar_over.png" id="4_xlg7c"]
 [ext_resource type="Texture2D" uid="uid://dio4vyuycbr34" path="res://assets/indicator_line.png" id="4_ym5sv"]
@@ -12,12 +12,16 @@
 [ext_resource type="PackedScene" uid="uid://ugfs6mb3eij" path="res://scene/npc.tscn" id="5_ve786"]
 [ext_resource type="Texture2D" uid="uid://vrxxchwko243" path="res://assets/MC/Player.png" id="7_81276"]
 [ext_resource type="Texture2D" uid="uid://c6vkd2no00f74" path="res://assets/ref rythm.png" id="8_ve786"]
-[ext_resource type="FontFile" uid="uid://cpwsjev80woig" path="res://assets/font/IndieFlower-Regular.ttf" id="12_ux4dc"]
+[ext_resource type="FontFile" uid="uid://ci0laul4gperq" path="res://assets/font/IndieFlower-Regular.ttf" id="12_ux4dc"]
 [ext_resource type="Texture2D" uid="uid://ctvjmn04hrhws" path="res://assets/inhaler_bg.png" id="14_i6gbm"]
 [ext_resource type="PackedScene" uid="uid://cm56yqawv13q5" path="res://scene/key_listener.tscn" id="14_ve786"]
 [ext_resource type="Texture2D" uid="uid://cidcsurswdf2n" path="res://assets/inhaler tutup 1.png" id="15_ux4dc"]
 [ext_resource type="Texture2D" uid="uid://cqfdfihudgvxa" path="res://assets/inhaler tutup 3.png" id="16_jrd6n"]
 [ext_resource type="Texture2D" uid="uid://cud4sdhud5u6n" path="res://assets/inhaler_used.png" id="17_jhlss"]
+[ext_resource type="PackedScene" uid="uid://cg3gi6e6brq1i" path="res://scene/game_over.tscn" id="19_jrd6n"]
+[ext_resource type="PackedScene" uid="uid://i5airf04p1ds" path="res://scene/pause.tscn" id="20_jhlss"]
+[ext_resource type="Texture2D" uid="uid://byxgr25ut784w" path="res://assets/Image/Button/Pause Button.png" id="21_1it6f"]
+[ext_resource type="Texture2D" uid="uid://bri6t51ldeb12" path="res://assets/Image/Button/Pause Button_Press.png" id="22_pp3pk"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_i6gbm"]
 animations = [{
@@ -235,6 +239,15 @@ centered = false
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
+[node name="PauseButton" type="TextureButton" parent="CanvasLayer"]
+offset_left = 88.0
+offset_top = 64.0
+offset_right = 160.0
+offset_bottom = 136.0
+texture_normal = ExtResource("21_1it6f")
+texture_pressed = ExtResource("22_pp3pk")
+texture_hover = ExtResource("22_pp3pk")
+
 [node name="StaminaBar" type="TextureProgressBar" parent="CanvasLayer"]
 offset_left = 659.0
 offset_top = 58.0
@@ -243,6 +256,9 @@ offset_bottom = 110.0
 texture_under = ExtResource("3_xwcet")
 texture_over = ExtResource("4_xlg7c")
 texture_progress = ExtResource("4_p1ry8")
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("20_jhlss")]
+visible = false
 
 [node name="KeyListener" parent="." instance=ExtResource("14_ve786")]
 position = Vector2(1728, 935)
@@ -293,6 +309,13 @@ color = Color(0, 0, 0, 1)
 libraries = {
 &"": SubResource("AnimationLibrary_jrd6n")
 }
+
+[node name="GameOver" parent="." instance=ExtResource("19_jrd6n")]
+visible = false
+offset_left = -32.0
+offset_top = -168.0
+offset_right = -32.0
+offset_bottom = -168.0
 
 [connection signal="timeout" from="PhaseTimer" to="." method="_on_phase_timer_timeout"]
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]

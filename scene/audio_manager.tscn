@@ -1,6 +1,6 @@
 [gd_scene load_steps=21 format=3 uid="uid://62osyd560dst"]
 
-[ext_resource type="Script" uid="uid://dtd1jytobahdq" path="res://script/audio_manager.gd" id="1_ctfg4"]
+[ext_resource type="Script" path="res://script/audio_manager.gd" id="1_ctfg4"]
 [ext_resource type="AudioStream" uid="uid://g038gqbn8764" path="res://assets/Audio/BGM/bg kereta.ogg" id="1_jmo2v"]
 [ext_resource type="AudioStream" uid="uid://ojv0s5hsihvu" path="res://assets/Audio/BGM/bgm main menu.ogg" id="2_ctfg4"]
 [ext_resource type="AudioStream" uid="uid://cxqjpb6ab2t3b" path="res://assets/Audio/BGM/s1-2 tpi gapake backsound kereta.ogg" id="3_mjxfj"]

@@ -22,6 +22,10 @@ const GOOD_RANGE = 120.0
 @onready var space_label = $SpaceHintLabel
 @onready var inhaler_count_label = $InhalerCount
 @onready var space_delay_timer = $SpaceDelayTimer
+@onready var game_over_scene = preload("res://scene/game_over.tscn")
+var game_over_ui
+@onready var pause_menu = $CanvasLayer/PauseMenu
+@onready var pause_button = $CanvasLayer/PauseButton
 
 
 # ==================================================
@@ -62,6 +66,10 @@ var inhaler_timer = 0.0
 # READY
 # ==================================================
 func _ready():
+	pause_menu.visible = false
+
+	pause_button.pressed.connect(_on_pause_button_pressed)
+	
 	inhaler_count_label.text = str(inhaler_stok)
 
 	bg_layer.motion_offset.x = 0
@@ -79,6 +87,27 @@ func _ready():
 	$PhaseTimer.stop()
 
 	update_npc_visibility()
+	
+	game_over_ui = game_over_scene.instantiate()
+	add_child(game_over_ui)
+
+	game_over_ui.visible = false
+
+func _on_pause_button_pressed():
+	if get_tree().paused:
+		_resume_game()
+	else:
+		_pause_game()
+
+
+func _pause_game():
+	get_tree().paused = true
+	pause_menu.visible = true
+
+
+func _resume_game():
+	get_tree().paused = false
+	pause_menu.visible = false
 
 
 # ==================================================
@@ -193,7 +222,7 @@ func prepare_next_stage():
 			scroll_speed = 1000.0
 			ty = 1.2
 			tx = 2.0
-			$StationTimer.start(1.0)
+			$StationTimer.start(30.0)
 			$SpawnTimer.wait_time = 0.9
 		2:
 			scroll_speed = 1300.0
@@ -400,10 +429,19 @@ func update_npc_visibility():
 func _game_win():
 	set_physics_process(false)
 	$SpawnTimer.stop()
+	
+	AudioManager.stop_all_bgm()
+	AudioManager.play_sfx("win")
 
+	if game_over_ui:
+		game_over_ui.show_victory()
 
 func _game_over():
 	set_physics_process(false)
 	get_tree().paused = true
+
 	AudioManager.stop_all_bgm()
 	AudioManager.play_sfx("lose")
+
+	if game_over_ui:
+		game_over_ui.show_defeat()

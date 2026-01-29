@@ -1,6 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://cg3gi6e6brq1i"]
+[gd_scene load_steps=12 format=3 uid="uid://cg3gi6e6brq1i"]
 
 [ext_resource type="Texture2D" uid="uid://clgmo2vvbwbtw" path="res://assets/Image/Rectangle 5.png" id="1_0sgxn"]
+[ext_resource type="Script" uid="uid://c88jdcsbpob1j" path="res://script/game_over.gd" id="1_p3ufs"]
 [ext_resource type="Texture2D" uid="uid://d2r6q13mvsiar" path="res://assets/Image/Victory.png" id="2_p3ufs"]
 [ext_resource type="Texture2D" uid="uid://dw58qscf0cggr" path="res://assets/Image/Rectangle 6.png" id="3_0wuup"]
 [ext_resource type="Texture2D" uid="uid://cre6mvq110qe1" path="res://assets/Image/Defeat.png" id="4_nhro7"]
@@ -32,16 +33,13 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_p3ufs")
 
 [node name="Victory" type="Panel" parent="."]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
 offset_top = 700.0
-offset_bottom = -260.0
-grow_horizontal = 2
-grow_vertical = 2
+offset_right = 1920.0
+offset_bottom = 820.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_46orx")
 
 [node name="Panel2" type="Panel" parent="Victory"]

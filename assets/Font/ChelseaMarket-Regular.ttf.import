@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://bj20krea5mkhk"
-path="res://.godot/imported/ChelseaMarket-Regular.ttf-f9c02b2f36dd59101fdf4808f62a2eab.fontdata"
+path="res://.godot/imported/ChelseaMarket-Regular.ttf-4d0cba0cb2d62b5e220a574903140549.fontdata"
 
 [deps]
 
-source_file="res://assets/Font/ChelseaMarket-Regular.ttf"
-dest_files=["res://.godot/imported/ChelseaMarket-Regular.ttf-f9c02b2f36dd59101fdf4808f62a2eab.fontdata"]
+source_file="res://assets/font/ChelseaMarket-Regular.ttf"
+dest_files=["res://.godot/imported/ChelseaMarket-Regular.ttf-4d0cba0cb2d62b5e220a574903140549.fontdata"]
 
 [params]
 
